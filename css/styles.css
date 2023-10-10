@@ -78,13 +78,6 @@ address {
     color: #2e2f42;
 }
 
-.header-logo.hero-btn:hover,
-.header-logo:focus {
-    color: #404bbf;
-}
-
-
-
 .header-list {
     display: flex;
     gap: 40px;
@@ -101,6 +94,9 @@ address {
         line-height: 1.5;
         letter-spacing: 0.02em;
         padding: 24px 0;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function; cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -109,8 +105,8 @@ address {
     color:#404BBF;
 }
 
-.header-list-link:first-child :after,{
-    display: block;;
+.header-list-link:first-child :after{
+    display: block;
     content: "";
     width: 48px;
     height: 4px;
@@ -118,9 +114,6 @@ address {
     border-radius: 2px;
     margin-top: 20px;
 
-}
-.header-list-link:first-child:active::after{
-background-color: #404BBF;
 }
 
 .header-address {
@@ -140,6 +133,10 @@ background-color: #404BBF;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function;
+            cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover,
@@ -157,6 +154,7 @@ background-color: #404BBF;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    max-width: 1440px;
 }
 
 .hero-container {
@@ -190,6 +188,10 @@ background-color: #404BBF;
         border-radius: 4px;
         margin-right: auto;
         margin-left: auto;
+        transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function;
+            cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -365,6 +367,9 @@ padding: 32px 15px;
 .portfolio-item {
     width: calc((100% - 48px) / 3);
 }
+.portfolio-item:hover .overlay{
+transform: translateY(0);
+}
 
 li .container {
     padding: 32px 16px;
@@ -374,10 +379,6 @@ li .container {
 
 .portfolio-img {}
 
-.portfolio-img:first-child {
-    position: relative;
-    overflow: hidden;
-}
 
 
 .portfolio-subtitle {
@@ -392,6 +393,32 @@ li .container {
 .portfolio-text {
     color: #434455;
         font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+}
+
+.overlay-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #4D5AE5;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}
+
+.overlay-text {
+    color: #F4F4FD;
+        font-size: 16px;
+        font-style: normal;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
